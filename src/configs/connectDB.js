@@ -9,10 +9,14 @@ const connection = mysql.createConnection({
 });
 
 // simple query
-connection.query("SELECT * FROM `user`", function (err, results, fields) {
-  console.log(results); // results contains rows returned by server
-  console.log(fields); // fields contains extra meta data about results, if available
-});
+// connection.query("SELECT * FROM `user`", function (err, results, fields) {
+//   console.log(results); // results contains rows returned by server
+//   let rows = results.map(row => {
+//     return row.id;
+//   });
+//   console.log(rows);
+//   // fields contains extra meta data about results, if available
+// });
 
 // with placeholder
 connection.query(

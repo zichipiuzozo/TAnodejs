@@ -1,13 +1,13 @@
 import express from "express";
 import configViewEngine from "./configs/ViewEngine";
 import initWebRoute from "./route/web";
-import connection from "./configs/connectDB";
+// import connection from "./configs/connectDB";
 
 require("dotenv").config();
 console.log(process.env);
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 8080;
 console.log(">>>> check port: ", port);
 
 //setup view engine
